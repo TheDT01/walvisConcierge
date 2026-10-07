@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Personal Life | Walvis Concierge</title>
+<meta name="description" content="Walvis Concierge looks after your social obligations: gifts, cakes, flowers, remembered dates, family occasions, reservations and errands, all in your name.">
+<meta name="theme-color" content="#3a1035">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Walvis Concierge">
+<meta property="og:title" content="Personal Life | Walvis Concierge">
+<meta property="og:description" content="Never miss the moment. Gifts, cakes, flowers and the dates that matter, taken care of in your name.">
+<!-- Share image for WhatsApp, Facebook and Instagram links.
+     PLACEHOLDER: once the site has its web address, make this a full URL,
+     e.g. https://www.yourdomain.com/images/share/walvis-share.jpg -->
+<meta property="og:image" content="images/share/walvis-share.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Walvis Concierge: If it’s legal, we can do it.">
+<meta name="twitter:card" content="summary_large_image">
+<!-- Browser-tab icon and home-screen icon -->
+<link rel="icon" type="image/png" sizes="64x64" href="images/logo/walvis-seal-64.png">
+<link rel="apple-touch-icon" href="images/logo/walvis-seal-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="personal-life">
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- Header and menu are built by js/main.js (edit the menu there, once) -->
+<div id="site-header"></div>
+
+<main id="main">
+
+<!-- ===== HERO ===== -->
+<section class="hero hero--page hero--cinema">
+  <img class="hero-media" src="images/lux-candlelight.jpg" alt="Candles glowing softly on a table" fetchpriority="high">
+  <div class="wrap hero-inner">
+    <span class="eyebrow">Personal Life</span>
+    <h1>Never miss <em>the moment.</em></h1>
+    <p class="lead">Gifts, cakes, flowers and the dates that matter, taken care of in your name.</p>
+    <div class="btn-row">
+      <a class="btn btn-wa" data-wa="Hello Walvis, I would like help with a gift or an occasion.">Send something</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== THE PROMISE (text lives in js/main.js → PROMISE) ===== -->
+<div data-promise></div>
+
+
+<!-- ===== IN YOUR NAME (edit in js/data.js → personalLife) ===== -->
+<section class="section section--plum section--deep" id="worlds">
+  <div class="wrap">
+    <div class="section-head section-head--row reveal">
+      <div>
+        <span class="eyebrow">In your name</span>
+        <h2>The small things, <em>done beautifully</em></h2>
+      </div>
+      <p class="lead">Tell us who it is for and what the card should say. We take care of the rest, on the day.</p>
+    </div>
+    <div data-worlds="personalLife"></div>
+  </div>
+</section>
+
+<section class="section" id="ideas">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Ready to send</span>
+      <h2>A few <em>favourites</em></h2>
+    </div>
+    <div data-plans="personalLife"></div>
+  </div>
+</section>
+
+<!-- ===== CLOSING BAND ===== -->
+<section class="band">
+  <img class="band-media" src="images/balloons.jpg" alt="" loading="lazy" decoding="async">
+  <div class="wrap reveal">
+    <span class="eyebrow">Personal Life</span>
+    <h2>Someone's day <em>coming up?</em></h2>
+    <p>Tell us who it is for and when. We will send you a few ideas.</p>
+    <div class="btn-row">
+      <a class="btn btn-wa" data-wa="Hello Walvis, I would like help with a gift or an occasion.">Enquire on WhatsApp</a>
+      <a class="btn btn--ghost" href="contact.html">Other ways to reach us</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- Footer and the floating WhatsApp button are built by js/main.js -->
+<div id="site-footer"></div>
+
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
