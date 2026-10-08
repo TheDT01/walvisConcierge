@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Personal Life | Walvis Concierge</title>
-<meta name="description" content="Walvis Concierge looks after your social obligations: gifts, cakes, flowers, remembered dates, family occasions, reservations and errands, all in your name.">
+<meta name="description" content="An exclusive privilege for Walvis members: gifts, special days, errands, bookings and every part of personal life, handled by your concierge.">
 <meta name="theme-color" content="#3a1035">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Walvis Concierge">
 <meta property="og:title" content="Personal Life | Walvis Concierge">
-<meta property="og:description" content="Never miss the moment. Gifts, cakes, flowers and the dates that matter, taken care of in your name.">
+<meta property="og:description" content="An exclusive privilege for Walvis members. Your personal life, managed.">
 <!-- Share image for WhatsApp, Facebook and Instagram links.
      This must be a full web address. If the site moves to its own domain,
      change "https://thedt01.github.io/walvisConcierge" to the new address. -->
@@ -27,7 +27,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
-<body data-page="personal-life">
+<body data-page="personal-life" data-wa-message="Hello Walvis, I would like to know about Personal Life management.">
 <a class="skip-link" href="#main">Skip to content</a>
 
 <!-- Header and menu are built by js/main.js (edit the menu there, once) -->
@@ -35,56 +35,359 @@
 
 <main id="main">
 
-<!-- ===== HERO ===== -->
-<section class="hero hero--page hero--cinema">
-  <img class="hero-media" src="images/lux-candlelight.jpg" alt="Candles glowing softly on a table" fetchpriority="high">
+<!-- ===== 1. HERO ===== -->
+<section class="hero hero--cinema">
+  <img class="hero-media" src="images/pl-flowers-hero.jpg" alt="A bouquet of soft pink roses, ready to be delivered" fetchpriority="high">
   <div class="wrap hero-inner">
-    <span class="eyebrow">Personal Life</span>
-    <h1>Never miss <em>the moment.</em></h1>
-    <p class="lead">Gifts, cakes, flowers and the dates that matter, taken care of in your name.</p>
+    <span class="eyebrow">An exclusive member privilege</span>
+    <h1>Your personal life, <em>managed.</em></h1>
+    <p class="lead">Everything your life needs, handled by your concierge. All you have to do is enjoy it.</p>
     <div class="btn-row">
-      <a class="btn btn-wa" data-wa="Hello Walvis, I would like help with a gift or an occasion.">Send something</a>
+      <a class="btn btn-wa" data-wa="Hello Walvis, I would like to know about Personal Life management.">Enquire on WhatsApp</a>
+      <a class="btn btn--ghost" href="#what-we-handle">See what we handle</a>
     </div>
+    <p class="members-tag">Members only</p>
+  </div>
+  <span class="scroll-cue" aria-hidden="true"></span>
+</section>
+
+<!-- ===== 2. THE PERK ===== -->
+<section class="section">
+  <div class="wrap center narrow reveal">
+    <span class="eyebrow">The perk</span>
+    <p class="statement center pl-statement">The quiet luxury of never having to remember, queue, chase or carry <em>anything again.</em></p>
+    <p class="lead">From the flowers on your mother&rsquo;s birthday to the paperwork at the bank, if it belongs to your personal life, your concierge takes care of it.</p>
   </div>
 </section>
 
-<!-- ===== THE PROMISE (text lives in js/main.js → PROMISE) ===== -->
-<div data-promise></div>
-
-
-<!-- ===== IN YOUR NAME (edit in js/data.js → personalLife) ===== -->
-<section class="section section--plum section--deep" id="worlds">
+<!-- ===== 3. EVERYTHING WE HANDLE ===== -->
+<section class="section section--mist" id="what-we-handle">
   <div class="wrap">
     <div class="section-head section-head--row reveal">
       <div>
-        <span class="eyebrow">In your name</span>
-        <h2>The small things, <em>done beautifully</em></h2>
+        <span class="eyebrow">What we take off your plate</span>
+        <h2>Everything your personal life needs. <em>No headache.</em></h2>
       </div>
-      <p class="lead">Tell us who it is for and what the card should say. We take care of the rest, on the day.</p>
+      <p class="lead">The things you could miss, the things you should do, and the things you would rather not. Hand them all to us.</p>
     </div>
-    <div data-worlds="personalLife"></div>
+    <div class="pl-tiles">
+      <article class="pl-tile reveal">
+        <h3>
+          <button class="pl-tile-btn" type="button" data-tile aria-expanded="false" aria-controls="pl-panel-1">
+            <span class="pl-tile-num" aria-hidden="true">01</span>
+            <span class="pl-tile-title">Love, sent on your behalf</span>
+            <span class="pl-tile-icon" aria-hidden="true"></span>
+            <span class="pl-tile-intro">The people you love never miss a gesture.</span>
+          </button>
+        </h3>
+        <div class="pl-tile-panel" id="pl-panel-1">
+          <div class="pl-tile-inner">
+            <ul class="ticks">
+              <li>Flowers, cakes and gifts delivered to your loved ones</li>
+              <li>Handwritten cards in your words</li>
+              <li>Surprises arranged</li>
+              <li>Wedding gifts taken and given on your behalf</li>
+              <li>Unique gifts found for the people who have everything</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+      <article class="pl-tile reveal">
+        <h3>
+          <button class="pl-tile-btn" type="button" data-tile aria-expanded="false" aria-controls="pl-panel-2">
+            <span class="pl-tile-num" aria-hidden="true">02</span>
+            <span class="pl-tile-title">Your gifting, remembered</span>
+            <span class="pl-tile-icon" aria-hidden="true"></span>
+            <span class="pl-tile-intro">We keep a private record of every gift, so nothing repeats and no one is forgotten.</span>
+          </button>
+        </h3>
+        <div class="pl-tile-panel" id="pl-panel-2">
+          <div class="pl-tile-inner">
+            <ul class="ticks">
+              <li>Family gift history</li>
+              <li>Corporate gift history</li>
+              <li>What each person likes</li>
+              <li>Who has been thanked</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+      <article class="pl-tile reveal">
+        <h3>
+          <button class="pl-tile-btn" type="button" data-tile aria-expanded="false" aria-controls="pl-panel-3">
+            <span class="pl-tile-num" aria-hidden="true">03</span>
+            <span class="pl-tile-title">Special days, never missed</span>
+            <span class="pl-tile-icon" aria-hidden="true"></span>
+            <span class="pl-tile-intro">Birthdays, anniversaries and the days that matter, remembered and marked on time.</span>
+          </button>
+        </h3>
+        <div class="pl-tile-panel" id="pl-panel-3">
+          <div class="pl-tile-inner">
+            <ul class="ticks">
+              <li>Reminders ahead of time</li>
+              <li>Ideas sent to you</li>
+              <li>Gifts and flowers on the day</li>
+              <li>Small celebrations arranged</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+      <article class="pl-tile reveal">
+        <h3>
+          <button class="pl-tile-btn" type="button" data-tile aria-expanded="false" aria-controls="pl-panel-4">
+            <span class="pl-tile-num" aria-hidden="true">04</span>
+            <span class="pl-tile-title">Home and kitchen, the finest</span>
+            <span class="pl-tile-icon" aria-hidden="true"></span>
+            <span class="pl-tile-intro">Top-quality produce and the things you cannot easily find.</span>
+          </button>
+        </h3>
+        <div class="pl-tile-panel" id="pl-panel-4">
+          <div class="pl-tile-inner">
+            <ul class="ticks">
+              <li>The best farm-fresh eggs, vegetables, fish and meat</li>
+              <li>Imported foods and specialty items</li>
+              <li>Household essentials</li>
+              <li>Hard-to-find ingredients sourced for you</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+      <article class="pl-tile reveal">
+        <h3>
+          <button class="pl-tile-btn" type="button" data-tile aria-expanded="false" aria-controls="pl-panel-5">
+            <span class="pl-tile-num" aria-hidden="true">05</span>
+            <span class="pl-tile-title">Financial and clerical errands</span>
+            <span class="pl-tile-icon" aria-hidden="true"></span>
+            <span class="pl-tile-intro">The paperwork and running around, handled for you.</span>
+          </button>
+        </h3>
+        <div class="pl-tile-panel" id="pl-panel-5">
+          <div class="pl-tile-inner">
+            <ul class="ticks">
+              <li>Bank work and paperwork</li>
+              <li>Bills and payments</li>
+              <li>Documents submitted and collected</li>
+              <li>Renewals and appointments</li>
+              <li>Car repairs and servicing</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+      <article class="pl-tile reveal">
+        <h3>
+          <button class="pl-tile-btn" type="button" data-tile aria-expanded="false" aria-controls="pl-panel-6">
+            <span class="pl-tile-num" aria-hidden="true">06</span>
+            <span class="pl-tile-title">Health, supported</span>
+            <span class="pl-tile-icon" aria-hidden="true"></span>
+            <span class="pl-tile-intro">We are there when it matters, day or night.</span>
+          </button>
+        </h3>
+        <div class="pl-tile-panel" id="pl-panel-6">
+          <div class="pl-tile-inner">
+            <ul class="ticks">
+              <li>Doctor and hospital appointments arranged</li>
+              <li>Admission paperwork handled</li>
+              <li>Someone by your side</li>
+              <li>Medicines picked up</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+      <article class="pl-tile reveal">
+        <h3>
+          <button class="pl-tile-btn" type="button" data-tile aria-expanded="false" aria-controls="pl-panel-7">
+            <span class="pl-tile-num" aria-hidden="true">07</span>
+            <span class="pl-tile-title">Booked and found</span>
+            <span class="pl-tile-icon" aria-hidden="true"></span>
+            <span class="pl-tile-intro">The right place, the right person, the right time.</span>
+          </button>
+        </h3>
+        <div class="pl-tile-panel" id="pl-panel-7">
+          <div class="pl-tile-inner">
+            <ul class="ticks">
+              <li>Restaurant tables</li>
+              <li>Salons and spas</li>
+              <li>Classes and lessons</li>
+              <li>Event tickets</li>
+              <li>Trusted tutors, trainers, technicians and help, found for you</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+      <article class="pl-tile reveal">
+        <h3>
+          <button class="pl-tile-btn" type="button" data-tile aria-expanded="false" aria-controls="pl-panel-8">
+            <span class="pl-tile-num" aria-hidden="true">08</span>
+            <span class="pl-tile-title">Family and home life</span>
+            <span class="pl-tile-icon" aria-hidden="true"></span>
+            <span class="pl-tile-intro">For everyone under your roof.</span>
+          </button>
+        </h3>
+        <div class="pl-tile-panel" id="pl-panel-8">
+          <div class="pl-tile-inner">
+            <ul class="ticks">
+              <li>Children&rsquo;s activities and school events</li>
+              <li>Check-ins and help for parents</li>
+              <li>Domestic staff found</li>
+              <li>Pets cared for: vet, grooming, sitting</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+      <article class="pl-tile reveal">
+        <h3>
+          <button class="pl-tile-btn" type="button" data-tile aria-expanded="false" aria-controls="pl-panel-9">
+            <span class="pl-tile-num" aria-hidden="true">09</span>
+            <span class="pl-tile-title">For Bangladeshis abroad</span>
+            <span class="pl-tile-icon" aria-hidden="true"></span>
+            <span class="pl-tile-intro">We are your hands at home.</span>
+          </button>
+        </h3>
+        <div class="pl-tile-panel" id="pl-panel-9">
+          <div class="pl-tile-inner">
+            <ul class="ticks">
+              <li>Looking after parents and family in Bangladesh</li>
+              <li>Eid and occasion gifts sent home</li>
+              <li>Home and property errands handled while you are away</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+    </div>
+    <p class="pl-more reveal">And many, many more. Near or far, if your personal life needs it, your concierge handles it.</p>
   </div>
 </section>
 
-<section class="section" id="ideas">
+<!-- ===== 4. THE DATE KEEPER ===== -->
+<section class="section section--plum section--deep" id="date-keeper">
+  <div class="wrap">
+    <div class="section-head section-head--row reveal">
+      <div>
+        <span class="eyebrow">The Date Keeper</span>
+        <h2>Tell us once. <em>We remember forever.</em></h2>
+      </div>
+      <p class="lead">Share the dates that matter just once: birthdays, anniversaries, Eid, school days, renewals. Your concierge keeps them and acts on every one.</p>
+    </div>
+
+    <div class="dk reveal">
+      <p class="dk-label">An example year.</p>
+      <div class="dk-scroll" tabindex="0" role="group" aria-label="An example year of remembered dates">
+      <ol class="dk-track">
+        <li class="dk-stop dk-stop--event"><span class="dk-month">January</span><span class="dk-dot" aria-hidden="true"></span><span class="dk-event">Mum&rsquo;s birthday</span></li>
+        <li class="dk-stop" aria-hidden="true"><span class="dk-month">Feb</span><span class="dk-dot"></span></li>
+        <li class="dk-stop dk-stop--event"><span class="dk-month">March</span><span class="dk-dot" aria-hidden="true"></span><span class="dk-event">Wedding anniversary</span></li>
+        <li class="dk-stop dk-stop--event"><span class="dk-month">Eid</span><span class="dk-dot" aria-hidden="true"></span><span class="dk-event">Gifts for the whole family</span></li>
+        <li class="dk-stop" aria-hidden="true"><span class="dk-month">Apr</span><span class="dk-dot"></span></li>
+        <li class="dk-stop" aria-hidden="true"><span class="dk-month">May</span><span class="dk-dot"></span></li>
+        <li class="dk-stop dk-stop--event"><span class="dk-month">June</span><span class="dk-dot" aria-hidden="true"></span><span class="dk-event">Son&rsquo;s sports day</span></li>
+        <li class="dk-stop" aria-hidden="true"><span class="dk-month">Jul</span><span class="dk-dot"></span></li>
+        <li class="dk-stop dk-stop--event"><span class="dk-month">August</span><span class="dk-dot" aria-hidden="true"></span><span class="dk-event">Car papers renewal</span></li>
+        <li class="dk-stop" aria-hidden="true"><span class="dk-month">Sep</span><span class="dk-dot"></span></li>
+        <li class="dk-stop dk-stop--event"><span class="dk-month">October</span><span class="dk-dot" aria-hidden="true"></span><span class="dk-event">Best friend&rsquo;s wedding</span></li>
+        <li class="dk-stop" aria-hidden="true"><span class="dk-month">Nov</span><span class="dk-dot"></span></li>
+        <li class="dk-stop dk-stop--event"><span class="dk-month">December</span><span class="dk-dot" aria-hidden="true"></span><span class="dk-event">Year-end thank-you gifts</span></li>
+      </ol>
+      </div>
+    </div>
+
+    <h3 class="dk-choose reveal">You choose how we handle each date.</h3>
+    <div class="features">
+      <div class="feature reveal"><h4>Remind me</h4><p>A gentle nudge a few days before.</p></div>
+      <div class="feature reveal"><h4>Suggest</h4><p>Two or three ideas sent to you to choose from.</p></div>
+      <div class="feature reveal"><h4>Just handle it</h4><p>Done and delivered, with a photo sent to you.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 5. YOUR LIFE PROFILE ===== -->
+<section class="section">
+  <div class="wrap">
+    <div class="split">
+      <div class="split-media reveal"><img src="images/handwritten-note.jpg" alt="A fountain pen resting beside white petals" loading="lazy" decoding="async"></div>
+      <div class="split-text reveal">
+        <span class="eyebrow">How we get to know you</span>
+        <h2>It starts with your <em>Life Profile.</em></h2>
+        <p>When you join, you tell us once about the people who matter, the dates you keep, your favourite shops and flavours, your addresses and your preferences. We keep it private and up to date, so every request after that is quicker and more personal.</p>
+        <ul class="ticks">
+          <li>Your people and their dates</li>
+          <li>Your tastes and favourite places</li>
+          <li>Your gift history</li>
+          <li>Your household and routines</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 6. ONE DAY, HANDLED ===== -->
+<section class="section section--mist">
+  <div class="wrap narrow">
+    <div class="section-head reveal">
+      <span class="eyebrow">A day with your concierge</span>
+      <h2>You lived your day. <em>We handled the rest.</em></h2>
+      <p class="fine-print">An illustrative example.</p>
+    </div>
+    <ol class="day">
+        <li class="day-item reveal"><span class="day-time">8:00 am</span><p>The finest fresh vegetables and eggs delivered to the kitchen.</p></li>
+        <li class="day-item reveal"><span class="day-time">10:30 am</span><p>The car collected for its service.</p></li>
+        <li class="day-item reveal"><span class="day-time">12:00 pm</span><p>Bank papers submitted. No queue for you.</p></li>
+        <li class="day-item reveal"><span class="day-time">3:00 pm</span><p>Flowers and a cake arrive at your mother&rsquo;s door, with your note.</p></li>
+        <li class="day-item reveal"><span class="day-time">5:30 pm</span><p>Your father&rsquo;s hospital appointment, with someone by his side.</p></li>
+        <li class="day-item reveal"><span class="day-time">8:00 pm</span><p>A table for two, booked at the place that was full.</p></li>
+        <li class="day-item reveal"><span class="day-time">9:00 pm</span><p>The car is back, serviced. Tomorrow&rsquo;s wedding gift is wrapped and ready.</p></li>
+    </ol>
+    <p class="day-close reveal">All you did was enjoy your day.</p>
+  </div>
+</section>
+
+<!-- ===== 7. HOW IT WORKS ===== -->
+<section class="section section--plum">
   <div class="wrap">
     <div class="section-head reveal">
-      <span class="eyebrow">Ready to send</span>
-      <h2>A few <em>favourites</em></h2>
+      <span class="eyebrow">How it works</span>
+      <h2>Simple, <em>on purpose.</em></h2>
     </div>
-    <div data-plans="personalLife"></div>
+    <div class="steps">
+      <div class="step reveal"><h3>You ask</h3><p>A message, a voice note or a call. Or we remind you first.</p></div>
+      <div class="step reveal"><h3>We send options</h3><p>For anything that needs a choice, two or three options within 24 hours.</p></div>
+      <div class="step reveal"><h3>You approve</h3><p>Nothing is bought or booked without your yes.</p></div>
+      <div class="step reveal"><h3>It&rsquo;s handled</h3><p>We do it and confirm when it&rsquo;s done.</p></div>
+    </div>
   </div>
 </section>
 
-<!-- ===== CLOSING BAND ===== -->
+<!-- ===== 8. DISCRETION ===== -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Our promise to you</span>
+      <h2>Quietly, <em>carefully.</em></h2>
+    </div>
+    <div class="features">
+      <div class="feature reveal"><h3>Private by default</h3><p>Your details, your people and your home stay between you and us.</p></div>
+      <div class="feature reveal"><h3>Your approval, always</h3><p>Every spend is agreed with you first.</p></div>
+      <div class="feature reveal"><h3>The same people, every time</h3><p>A small team that knows you, not a call centre.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 9. BRIDGE TO SPECIAL REQUESTS ===== -->
+<section class="section section--mist section--tight">
+  <div class="wrap center narrow reveal">
+    <p class="statement center pl-bridge">Something out of the ordinary in mind? If it&rsquo;s legal, ask.</p>
+    <a class="link-arrow" href="special-requests.html">Special Requests</a>
+  </div>
+</section>
+
+<!-- ===== 10. CLOSING BAND ===== -->
 <section class="band">
-  <img class="band-media" src="images/balloons.jpg" alt="" loading="lazy" decoding="async">
+  <img class="band-media" src="images/lux-candlelight.jpg" alt="" loading="lazy" decoding="async">
   <div class="wrap reveal">
-    <span class="eyebrow">Personal Life</span>
-    <h2>Someone's day <em>coming up?</em></h2>
-    <p>Tell us who it is for and when. We will send you a few ideas.</p>
+    <span class="eyebrow">Members only</span>
+    <h2>Hand over your <em>personal life.</em></h2>
+    <p>Personal Life management is an exclusive privilege for Walvis members. Membership is limited and by enquiry.</p>
     <div class="btn-row">
-      <a class="btn btn-wa" data-wa="Hello Walvis, I would like help with a gift or an occasion.">Enquire on WhatsApp</a>
+      <a class="btn btn-wa" data-wa="Hello Walvis, I would like to know about Personal Life management.">Enquire on WhatsApp</a>
       <a class="btn btn--ghost" href="contact.html">Other ways to reach us</a>
     </div>
   </div>

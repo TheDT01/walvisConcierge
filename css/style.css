@@ -1018,3 +1018,123 @@ body[data-page="privacy"] .site-header::before { opacity: 0; }
 
 .section--plum .card-tag { color: var(--teal-light); }
 .section--plum .card h3 a:hover { color: var(--teal-light); }
+
+
+/* ===== Personal Life page ===== */
+
+/* Hero: small "Members only" tag under the buttons */
+.members-tag {
+  display: inline-flex; align-items: center; gap: 10px; margin: 22px 0 0;
+  padding: 7px 14px; border: 1px solid var(--line-light);
+  font-family: var(--caps); font-size: 0.68rem; letter-spacing: 0.24em; text-transform: uppercase; color: var(--snow);
+}
+.members-tag::before { content: ""; width: 5px; height: 5px; border: 1px solid var(--teal-light); transform: rotate(45deg); }
+.pl-statement { max-width: 22ch; font-size: clamp(1.9rem, 5.6vw, 3.3rem); }
+.pl-bridge { font-size: clamp(1.5rem, 3.6vw, 2.2rem); max-width: 30ch; margin-bottom: 0.5em; }
+#what-we-handle, #date-keeper { scroll-margin-top: 64px; }
+
+/* --- Category tiles: tap or click a tile to see its examples --- */
+.pl-tiles { display: grid; grid-template-columns: 1fr; gap: 12px; align-items: start; }
+.pl-tile { background: var(--snow); border: 1px solid var(--line); transition: border-color 0.5s var(--ease), box-shadow 0.5s var(--ease); }
+.pl-tile:hover, .pl-tile.is-open { border-color: var(--teal); }
+.pl-tile.is-open { box-shadow: 0 18px 40px rgba(38, 9, 31, 0.08); }
+.pl-tile h3 { margin: 0; font-size: inherit; font-weight: inherit; }
+.pl-tile-btn {
+  display: grid; grid-template-columns: auto 1fr auto; column-gap: 16px; row-gap: 6px; align-items: baseline;
+  width: 100%; padding: 24px 22px; background: none; border: 0; cursor: pointer; text-align: left; color: var(--plum);
+}
+.pl-tile-num { font-family: var(--serif); font-style: italic; font-size: 1.15rem; color: var(--teal-dark); }
+.pl-tile-title { font-family: var(--serif); font-size: 1.5rem; font-weight: 500; line-height: 1.15; }
+.pl-tile-intro { grid-column: 2 / 4; font-family: var(--sans); font-size: 0.95rem; font-weight: 300; line-height: 1.6; opacity: 0.8; }
+/* plus sign that turns into a minus when open */
+.pl-tile-icon { position: relative; width: 14px; height: 14px; align-self: center; }
+.pl-tile-icon::before, .pl-tile-icon::after {
+  content: ""; position: absolute; left: 0; right: 0; top: 50%; height: 1px; background: var(--teal-dark);
+  transition: transform 0.4s var(--ease);
+}
+.pl-tile-icon::after { transform: rotate(90deg); }
+.pl-tile-btn[aria-expanded="true"] .pl-tile-icon::after { transform: rotate(0deg); }
+.pl-tile-panel { display: grid; grid-template-rows: 0fr; transition: grid-template-rows 0.5s var(--ease); }
+.pl-tile-inner { overflow: hidden; visibility: hidden; transition: visibility 0.5s; }
+.pl-tile.is-open .pl-tile-panel { grid-template-rows: 1fr; }
+.pl-tile.is-open .pl-tile-inner { visibility: visible; transition: visibility 0s; }
+.pl-tile-inner .ticks { margin: 0 22px 22px; }
+.pl-tile-inner .ticks li { font-size: 0.95rem; padding: 11px 0 11px 30px; }
+.pl-more {
+  margin: clamp(36px, 5vw, 56px) auto 0; text-align: center; max-width: 34ch;
+  font-family: var(--serif); font-style: italic; font-size: clamp(1.35rem, 3vw, 1.8rem); line-height: 1.35;
+}
+
+/* --- The Date Keeper: a year on one line --- */
+.dk { margin-bottom: clamp(40px, 6vw, 64px); }
+.dk-label { font-family: var(--caps); font-size: 0.68rem; letter-spacing: 0.24em; text-transform: uppercase; color: var(--teal-light); margin-bottom: 18px; }
+.dk-scroll {
+  overflow-x: auto; scrollbar-width: thin; scrollbar-color: var(--teal) transparent;
+  margin-inline: calc(var(--gutter) * -1); padding: 4px var(--gutter) 18px;
+}
+.dk-track { position: relative; display: flex; min-width: max-content; margin: 0; padding: 0; list-style: none; }
+.dk-track::before {
+  /* the year line */
+  content: ""; position: absolute; left: 0; right: 0; top: 37px; height: 1px; background: var(--line-light);
+  transform-origin: left center;
+}
+.dk-stop { position: relative; flex: 0 0 44px; display: flex; flex-direction: column; align-items: center; text-align: center; }
+.dk-stop--event { flex: 0 0 150px; }
+.dk-month { height: 30px; font-family: var(--caps); font-size: 0.6rem; letter-spacing: 0.16em; text-transform: uppercase; opacity: 0.5; }
+.dk-stop--event .dk-month { font-size: 0.72rem; letter-spacing: 0.2em; color: var(--teal-light); opacity: 1; }
+.dk-dot { width: 5px; height: 5px; margin-top: 5px; border-radius: 50%; background: var(--snow); opacity: 0.4; }
+.dk-stop--event .dk-dot { width: 15px; height: 15px; margin-top: 0; background: var(--plum-deep); border: 1px solid var(--teal-light); opacity: 1; box-shadow: inset 0 0 0 4px var(--plum-deep), inset 0 0 0 8px var(--teal-light); }
+.dk-event {
+  margin-top: 16px; padding: 0 8px; font-family: var(--serif); font-size: 1.15rem; line-height: 1.25;
+}
+.dk-event::before { content: ""; display: block; width: 1px; height: 14px; margin: -12px auto 8px; background: var(--teal-light); opacity: 0.6; }
+.dk-choose { font-size: clamp(1.5rem, 3.4vw, 2rem); font-weight: 400; margin-bottom: 0.9em; }
+.feature h4 { font-family: var(--serif); font-weight: 500; font-size: 1.45rem; line-height: 1.12; margin: 0 0 0.4em; }
+
+/* gentle entrance: the line draws, then each date appears in turn */
+.js .dk .dk-track::before { transform: scaleX(0); transition: transform 1.8s var(--ease) 0.2s; }
+.js .dk.in .dk-track::before { transform: scaleX(1); }
+.js .dk .dk-stop { opacity: 0; transform: translateY(10px); transition: opacity 0.9s var(--ease), transform 0.9s var(--ease); }
+.js .dk.in .dk-stop { opacity: 1; transform: none; }
+.js .dk.in .dk-stop:nth-child(1) { transition-delay: 0.30s; }  .js .dk.in .dk-stop:nth-child(2) { transition-delay: 0.40s; }
+.js .dk.in .dk-stop:nth-child(3) { transition-delay: 0.50s; }  .js .dk.in .dk-stop:nth-child(4) { transition-delay: 0.60s; }
+.js .dk.in .dk-stop:nth-child(5) { transition-delay: 0.70s; }  .js .dk.in .dk-stop:nth-child(6) { transition-delay: 0.80s; }
+.js .dk.in .dk-stop:nth-child(7) { transition-delay: 0.90s; }  .js .dk.in .dk-stop:nth-child(8) { transition-delay: 1.00s; }
+.js .dk.in .dk-stop:nth-child(9) { transition-delay: 1.10s; }  .js .dk.in .dk-stop:nth-child(10) { transition-delay: 1.20s; }
+.js .dk.in .dk-stop:nth-child(11) { transition-delay: 1.30s; } .js .dk.in .dk-stop:nth-child(12) { transition-delay: 1.40s; }
+.js .dk.in .dk-stop:nth-child(13) { transition-delay: 1.50s; }
+
+/* --- One day, handled: a vertical timeline --- */
+.day { position: relative; margin: 0; padding: 0; list-style: none; }
+.day::before { content: ""; position: absolute; left: 5px; top: 10px; bottom: 10px; width: 1px; background: var(--line); }
+.day-item { position: relative; padding: 0 0 26px 34px; }
+.day-item::before {
+  content: ""; position: absolute; left: 0; top: 7px; width: 11px; height: 11px; border-radius: 50%;
+  background: var(--snow-mist); border: 1px solid var(--teal);
+}
+.day-time { display: block; font-family: var(--caps); font-size: 0.74rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--teal-dark); margin-bottom: 4px; }
+.day-item p { margin: 0; font-family: var(--serif); font-size: 1.3rem; line-height: 1.35; }
+.day-close { margin: 14px 0 0 34px; font-family: var(--serif); font-style: italic; font-size: clamp(1.5rem, 3.4vw, 2rem); color: var(--teal-dark); }
+
+@media (min-width: 700px) {
+  .pl-tiles { grid-template-columns: 1fr 1fr; gap: 14px; }
+  .day-item { display: grid; grid-template-columns: 110px 1fr; gap: 20px; padding-left: 40px; align-items: baseline; }
+  .day-time { margin: 0; }
+  .day-close { margin-left: 170px; }
+}
+@media (min-width: 1000px) {
+  .pl-tiles { grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .pl-tile-btn { padding: 28px 26px; }
+  .pl-tile-inner .ticks { margin: 0 26px 26px; }
+}
+@media (min-width: 1240px) {
+  /* the whole year fits on one line: no sideways scrolling needed */
+  .dk-scroll { overflow: visible; margin-inline: 0; padding-inline: 0; }
+  .dk-track { min-width: 0; }
+  .dk-stop { flex: 1 1 44px; }
+  .dk-stop--event { flex: 3 1 150px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .js .dk .dk-track::before { transform: none; }
+  .js .dk .dk-stop { opacity: 1; transform: none; }
+}

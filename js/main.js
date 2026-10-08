@@ -57,7 +57,9 @@
     rules: ["Two or three options within 24 hours for special requests", "Nothing bought or booked without your yes"]
   };
 
-  var DEFAULT_MESSAGE = "Hello Walvis, I would like to make an enquiry.";
+  // The default WhatsApp message used by the header, footer and floating button.
+  // A page can set its own with <body data-wa-message="...">.
+  var DEFAULT_MESSAGE = document.body.getAttribute("data-wa-message") || "Hello Walvis, I would like to make an enquiry.";
 
   /* ---------- Small helpers ---------- */
   function esc(s) {
@@ -445,6 +447,20 @@
       if (next === null) return;
       next = (next + buttons.length) % buttons.length;
       buttons[next].focus(); select(buttons[next]);
+    });
+  });
+
+  /* ---------------------------------------------------------
+     6a. PERSONAL LIFE PAGE: expanding category tiles
+     HTML: <button data-tile aria-expanded="false" aria-controls="panel-id">
+     Click, tap, Enter or Space opens and closes a tile.
+     --------------------------------------------------------- */
+  each("[data-tile]", function (btn) {
+    btn.addEventListener("click", function () {
+      var open = btn.getAttribute("aria-expanded") !== "true";
+      btn.setAttribute("aria-expanded", open ? "true" : "false");
+      var tile = btn.closest(".pl-tile");
+      if (tile) tile.classList.toggle("is-open", open);
     });
   });
 
