@@ -33,11 +33,11 @@ var WALVIS = {
 
   /* ---------- 1. CONTACT DETAILS ---------- */
 
-  // PLACEHOLDER: real WhatsApp number. Digits only, with country code, no "+" or spaces.
-  whatsapp: "8801000000000",
+  // WhatsApp number. Digits only, with country code, no "+" or spaces.
+  whatsapp: "8801411267007",
 
-  // PLACEHOLDER: phone number exactly as it should be displayed.
-  phone: "+880 1000 000000",
+  // Phone number exactly as it should be displayed.
+  phone: "+880 1411-267007",
 
   email: "walvisconcierge@gmail.com",
   city: "Dhaka, Bangladesh",
