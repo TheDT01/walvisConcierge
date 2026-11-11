@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <base href="../">
+  <title>Retail · The Walvis Promenade | Walvis Concierge</title>
+  <meta name="robots" content="noindex">
+  <style>html, body { margin: 0; background: #12040f; }</style>
+  <!-- Shops are now rooms inside their salon (retail/level.html?level=…#room-…); old shop links are sent there. -->
+  <script src="retail/js/data.js?v=202611111829"></script>
+  <script>
+    (function () {
+      var id = new URLSearchParams(location.search).get('shop'), to = 'retail/index.html';
+      (window.WALVIS_PROMENADE ? WALVIS_PROMENADE.levels : []).forEach(function (l) { l.shops.forEach(function (s) { if (s.id === id) to = 'retail/level.html?level=' + l.id + '#room-' + s.id; }); });
+      location.replace(new URL(to, document.baseURI).href);
+    })();
+  </script>
+</head>
+<body><noscript><p><a href="retail/index.html" style="color:#5cc4c0">Enter The Walvis Promenade</a></p></noscript></body>
+</html>

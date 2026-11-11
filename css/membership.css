@@ -1,0 +1,34 @@
+/* =========================================================
+   Membership · "Why choose us", in the site's own style
+   ========================================================= */
+.wm-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: clamp(40px, 6vw, 96px); align-items: start; }
+.wm-main .lead strong { color: var(--snow); font-weight: 500; }
+.wm-found { margin-top: 34px; font-family: var(--serif); font-style: italic; font-size: 1.6rem; color: var(--snow); }
+.wm-points { list-style: none; margin: 14px 0 0; padding: 0; max-width: 600px; }
+.wm-points li { display: grid; gap: 6px; padding: 20px 0; border-top: 1px solid rgba(255, 250, 250, .14); }
+.wm-points li:last-child { border-bottom: 1px solid rgba(255, 250, 250, .14); }
+.wm-points h3 { margin: 0; font-family: var(--serif); font-weight: 400; font-size: 1.55rem; line-height: 1.2; color: var(--teal-light); }
+.wm-points p { margin: 0; color: rgba(255, 250, 250, .72); }
+.wm-main .btn-row { margin-top: 38px; }
+
+/* the membership card: the site's glass, with the seal */
+.wm-side { position: sticky; top: 110px; margin-top: clamp(0px, 5vw, 70px); }
+.wm-card { position: relative; padding: 40px 34px 34px; border-radius: var(--r-lg, 28px); border: 1px solid rgba(255, 250, 250, .14);
+  background: linear-gradient(150deg, rgba(255, 250, 250, .08), rgba(255, 250, 250, .02) 60%, rgba(92, 196, 192, .06));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .1), 0 30px 70px -40px rgba(0, 0, 0, .8); }
+.wm-seal { position: absolute; top: 26px; right: 26px; width: 54px; height: 54px; border-radius: 50%; }
+.wm-limited { display: flex; align-items: center; gap: 12px; margin: 18px 0 0; font-size: .82rem; letter-spacing: .2em; text-transform: uppercase; color: var(--teal-light); }
+.wm-links { display: grid; margin-top: 22px; }
+.wm-links a { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 14px 2px; border-top: 1px solid rgba(255, 250, 250, .12);
+  font-family: var(--serif); font-size: 1.45rem; color: var(--snow); transition: color .3s, padding .3s; }
+.wm-links a:last-child { border-bottom: 1px solid rgba(255, 250, 250, .12); }
+.wm-links a .i { width: 16px; height: 16px; color: var(--teal-light); opacity: .7; transition: transform .3s, opacity .3s; }
+.wm-links a:hover { color: var(--teal-light); padding-left: 8px; }
+.wm-links a:hover .i { transform: translateX(4px); opacity: 1; }
+
+@media (max-width: 900px) { .wm-grid { grid-template-columns: 1fr; } .wm-side { position: static; margin-top: 0; } }
+@media (max-width: 520px) { .wm-card { padding: 34px 24px 28px; } }
+
+/* the page is just this section: start it below the floating header and let it fill the screen */
+.wm-page { min-height: 100vh; min-height: 100svh; padding-top: clamp(150px, 18vh, 200px); }
+.wm-page h1.t-1 { font-size: clamp(3rem, 6vw, 5.2rem); }

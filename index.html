@@ -1,210 +1,211 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>If it’s legal, we can do it. | Walvis Concierge, Bangladesh</title>
-<meta name="description" content="If it’s legal, we can do it. Walvis Concierge is a private lifestyle concierge in Dhaka for travel, rare pieces, experiences, gifting and special requests. Two or three options within 24 hours, and nothing booked without your yes.">
-<meta name="theme-color" content="#3a1035">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="Walvis Concierge">
-<meta property="og:title" content="Walvis Concierge | If it’s legal, we can do it.">
-<meta property="og:description" content="If it’s legal, we can do it. A private lifestyle concierge in Dhaka. From seas to mountains, consider it done.">
-<!-- Share image for WhatsApp, Facebook and Instagram links.
-     This must be a full web address. If the site moves to its own domain,
-     change "https://thedt01.github.io/walvisConcierge" to the new address. -->
-<meta property="og:image" content="https://thedt01.github.io/walvisConcierge/images/share/walvis-share.jpg">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Walvis Concierge: If it’s legal, we can do it.">
-<meta name="twitter:card" content="summary_large_image">
-<!-- Browser-tab icon and home-screen icon -->
-<link rel="icon" type="image/png" sizes="32x32" href="images/logo/walvis-icon-32.png">
-<link rel="icon" type="image/png" sizes="64x64" href="images/logo/walvis-icon-64.png">
-<link rel="apple-touch-icon" href="images/logo/walvis-icon-180.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Walvis Concierge · Private Lifestyle Concierge, Dhaka</title>
+  <meta name="description" content="Walvis Concierge is a private lifestyle concierge in Dhaka. Travel, personal lifestyle, experiences, rare pieces and visitors' service. If It’s Legal, It’s Possible.">
+  <meta property="og:title" content="Walvis Concierge · If It’s Legal, It’s Possible.">
+  <meta property="og:description" content="From seas to mountains, consider it done. A private lifestyle concierge in Dhaka.">
+  <meta property="og:image" content="images/share/walvis-share.jpg">
+  <link rel="icon" href="images/logo/walvis-icon-32.png">
+  <link rel="apple-touch-icon" href="images/logo/walvis-icon-180.png">
+  <link rel="preload" href="fonts/cormorant-garamond.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/jost.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/fonts.css?v=202611111829">
+  <script>document.documentElement.classList.add('veiled')</script>
+  <link rel="stylesheet" href="css/style.css?v=202611111829">
 </head>
-<body data-page="home">
-<a class="skip-link" href="#main">Skip to content</a>
+<body>
+  <div id="site-header"></div>
 
-<!-- Header and menu are built by js/main.js (edit the menu there, once) -->
-<div id="site-header"></div>
+  <main id="main">
 
-<main id="main">
-
-<!-- ===== HERO: slow cross-fading photographs (add or remove <img> lines to change them) ===== -->
-<section class="hero hero--cinema">
-  <div class="hero-slides" data-slides>
-    <img src="images/bd-ahsan-manzil.jpg" alt="" fetchpriority="high">
-    <img src="images/lux-chandelier.jpg" alt="" loading="lazy">
-    <img src="images/bd-hatirjheel-night.jpg" alt="" loading="lazy">
-    <img src="images/lux-alpenglow.jpg" alt="" loading="lazy">
-    <img src="images/lux-superyacht.jpg" alt="" loading="lazy">
-  </div>
-  <div class="wrap hero-inner">
-    <span class="eyebrow">Private concierge &middot; Dhaka</span>
-    <h1>If it&rsquo;s legal, <em>we can do it.</em></h1>
-    <p class="lead">From seas to mountains, consider it done. Journeys, rare pieces, unforgettable evenings and every detail in between, handled by people who know Bangladesh.</p>
-    <p class="honest-line">We give every request a real effort, and tell you early if something cannot be done.</p>
-    <div class="btn-row">
-      <a class="btn" href="what-we-do.html">What we do</a>
-      <a class="btn btn--ghost btn-wa" data-wa="Hello Walvis, I would like to know more about your concierge.">Message us</a>
+  <!-- ================= HERO · the ocean ================= -->
+  <section class="hero" data-notes>
+    <div class="ocean" aria-hidden="true">
+      <div class="surface"></div>
+      <div class="rays"></div>
+      <canvas class="sea" data-mode="hero"></canvas>
+      <div class="depth"></div>
     </div>
-  </div>
-  <span class="hero-caption" aria-hidden="true">Seas &middot; Mountains &middot; Everything between</span>
-</section>
 
-<!-- ===== MANIFESTO ===== -->
-<section class="section section--plum section--deep">
-  <div class="wrap center narrow reveal manifesto">
-    <div class="rule" aria-hidden="true"><span></span></div>
-    <p class="statement center">The quietest flex is <em>never having to arrange anything.</em></p>
-    <p class="lead">Walvis is a lifestyle concierge, started in Dhaka. Journeys, the Collection, experiences, gifting and our visitors&rsquo; service are open to everyone. Special requests and a team that knows you are for members. Message us any time.</p>
-    <a class="link-arrow" href="about.html">Our story</a>
-  </div>
-</section>
 
-<!-- ===== THE WORLD OF WALVIS ===== -->
-<section class="section section--plum section--deep" style="padding-top:0">
-  <div class="wrap">
-    <div class="section-head section-head--row reveal">
-      <div>
-        <span class="eyebrow">The world of Walvis</span>
-        <h2>Another world, <em>one message away</em></h2>
+    <div class="hero-foot">
+      <span class="caps reveal">If It&rsquo;s Legal, It&rsquo;s Possible</span>
+      <h1 class="phrase reveal">From seas to mountains,<br><em>consider it done.</em></h1>
+      <a class="btn btn-line reveal on-dark" href="what-we-offer.html" style="color:#fffafa;border-color:rgba(255,250,250,.5)">Concierge <svg class="i"><use href="#i-arrow"/></svg></a>
+    </div>
+  </section>
+
+  <!-- ================= STATEMENT ================= -->
+  <section class="section light">
+    <div class="wrap statement">
+      <div class="reveal"><div class="meander short" style="margin-bottom:34px"></div><blockquote>The quietest flex is <em>never having to arrange anything.</em></blockquote></div>
+      <div class="body reveal d1">
+        <p>Journeys, the Collection, experiences, gifting and our visitors&rsquo; service are open to everyone. Special requests and a team that knows you are for members. Message us any time.</p>
+        <div class="btn-row"><a class="link" href="about.html">Our story <svg class="i"><use href="#i-arrow"/></svg></a></div>
       </div>
-      <p class="lead">The finest of Bangladesh, thoughtful gifting, evenings to remember and travel planned end to end. Choose where to begin.</p>
     </div>
-    <div class="worlds worlds--three">
-      <a class="world reveal" href="travel.html">
-        <img src="images/bd-star-mosque-interior.jpg" alt="" loading="lazy" decoding="async">
-        <div class="world-body"><span class="world-kicker">Bangladesh</span><h3>Home, as few see it</h3><p>Palaces of Old Dhaka and the country, privately.</p><span class="link-arrow">Discover</span></div>
-      </a>
-      <a class="world reveal" href="personal-life.html">
-        <img src="images/lux-candlelight.jpg" alt="" loading="lazy" decoding="async">
-        <div class="world-body"><span class="world-kicker">Gifting</span><h3>Sent in your name</h3><p>Flowers, gifts and dates remembered, on the right day.</p><span class="link-arrow">Discover</span></div>
-      </a>
-      <a class="world reveal" href="experiences.html">
-        <img src="images/lux-red-staircase.jpg" alt="" loading="lazy" decoding="async">
-        <div class="world-body"><span class="world-kicker">Experiences</span><h3>Evenings to remember</h3><p>Celebrations, proposals and private dining.</p><span class="link-arrow">Discover</span></div>
-      </a>
-      <a class="world reveal" href="travel.html">
-        <img src="images/lux-ocean-lounge.jpg" alt="" loading="lazy" decoding="async">
-        <div class="world-body"><span class="world-kicker">Travel</span><h3>Journeys, planned for you</h3><p>Hotels, flights and itineraries arranged end to end.</p><span class="link-arrow">Discover</span></div>
-      </a>
-      <a class="world reveal" href="retail.html">
-        <img src="images/lux-pocket-watch.jpg" alt="" loading="lazy" decoding="async">
-        <div class="world-body"><span class="world-kicker">The Collection</span><h3>Rare pieces</h3><p>Jewellery, timepieces, jamdani and oud, found for you.</p><span class="link-arrow">Discover</span></div>
-      </a>
-      <a class="world reveal" href="travel.html#worlds">
-        <img src="images/lux-superyacht.jpg" alt="" loading="lazy" decoding="async">
-        <div class="world-body"><span class="world-kicker">On request</span><h3>Jets and yachts</h3><p>Private aircraft, helicopters and yachts, arranged on request.</p><span class="link-arrow">Discover</span></div>
-      </a>
-    </div>
-  </div>
-</section>
+  </section>
 
-<!-- ===== THE PROMISE (text lives in js/main.js → PROMISE) ===== -->
-<div data-promise></div>
-
-<!-- ===== MEMBERSHIP TABS ===== -->
-<section class="section section--plum">
-  <div class="wrap">
-    <div class="section-head section-head--row reveal">
-      <div>
-        <span class="eyebrow">Membership</span>
-        <h2>One standard, <em>for every personal member</em></h2>
+  <!-- ================= THE WORLD OF WALVIS ================= -->
+  <section class="section mist" style="padding-top:0;background:linear-gradient(var(--snow) 0, var(--snow) 10%, var(--snow-mist) 10%)">
+    <div class="wrap">
+      <div class="head-row">
+        <div class="head reveal">
+          <span class="kicker">Concierge</span>
+          <h2 class="t-1">Another world, <em>one message away.</em></h2>
+        </div>
+        <a class="btn btn-line reveal light" href="what-we-offer.html" style="color:var(--plum);border-color:rgba(58,16,53,.35)">Everything we do <svg class="i"><use href="#i-arrow"/></svg></a>
       </div>
-      <p class="lead">Personal membership has no paid tiers of service. Corporate terms are tailored to each company. Membership is limited.</p>
+      <div class="mosaic">
+        <a class="tile m-a reveal" href="travel.html"><img src="images/lux-private-jet.jpg" alt="Private jet on approach" loading="lazy" srcset="images/sm/lux-private-jet.jpg 900w, images/lux-private-jet.jpg 1600w" sizes="100vw"><span class="go"><svg class="i"><use href="#i-arrow"/></svg></span><span class="k">Travel</span><h3>You pack. We plan.</h3><p>Private skies, open seas, grand hotels and the finest corners of Bangladesh.</p></a>
+        <a class="tile m-b reveal d1" href="experiences.html"><img src="images/lux-place-setting.jpg" alt="An elegant table setting" loading="lazy" srcset="images/sm/lux-place-setting.jpg 900w, images/lux-place-setting.jpg 1600w" sizes="100vw"><span class="go"><svg class="i"><use href="#i-arrow"/></svg></span><span class="k">Experiences</span><h3>Beyond the expected</h3><p>Private celebrations, exceptional journeys, the private table and rare access.</p></a>
+        <a class="tile m-c reveal d2" href="retail.html"><img src="images/lux-pocket-watch.jpg" alt="A vintage pocket watch" loading="lazy" srcset="images/sm/lux-pocket-watch.jpg 900w, images/lux-pocket-watch.jpg 1600w" sizes="100vw"><span class="go"><svg class="i"><use href="#i-arrow"/></svg></span><span class="k">Retail · The Collection</span><h3>Rare pieces, found</h3><p>Jewellery, timepieces, jamdani and oud.</p></a>
+        <a class="tile m-d reveal" href="assets.html"><img src="images/lux-villa-evening.jpg" alt="A villa pool at evening" loading="lazy" srcset="images/sm/lux-villa-evening.jpg 900w, images/lux-villa-evening.jpg 1600w" sizes="100vw"><span class="go"><svg class="i"><use href="#i-arrow"/></svg></span><span class="k">Assets</span><h3>What you own, looked after</h3></a>
+        <a class="tile m-e reveal d1" href="foreigners.html"><img src="images/bd-ahsan-manzil.jpg" alt="Ahsan Manzil, Old Dhaka" loading="lazy" srcset="images/sm/bd-ahsan-manzil.jpg 900w, images/bd-ahsan-manzil.jpg 1600w" sizes="100vw"><span class="go"><svg class="i"><use href="#i-arrow"/></svg></span><span class="k">Discover Bangladesh</span><h3>Bangladesh, made easy</h3></a>
+        <a class="tile m-f reveal d2" href="expats.html"><img src="images/bd-hatirjheel-night.jpg" alt="Hatirjheel, Dhaka at night" loading="lazy" srcset="images/sm/bd-hatirjheel-night.jpg 900w, images/bd-hatirjheel-night.jpg 1600w" sizes="100vw"><span class="go"><svg class="i"><use href="#i-arrow"/></svg></span><span class="k">Concierge for Expats</span><h3>While you are away</h3></a>
+      </div>
     </div>
-    <div class="reveal" data-tabs>
-      <div class="tabs-list" role="tablist" aria-label="Membership types">
-        <button class="tab" role="tab" id="tab-personal" aria-controls="panel-personal" aria-selected="true">Personal</button>
-        <button class="tab" role="tab" id="tab-corporate" aria-controls="panel-corporate" aria-selected="false" tabindex="-1">Corporate</button>
+  </section>
+
+  <!-- ================= BANGLADESH BAND ================= -->
+  <section class="band">
+    <img src="images/bd-river-boats-dusk.jpg" alt="Fishing boats on a river at dusk, Bangladesh" loading="lazy" srcset="images/sm/bd-river-boats-dusk.jpg 900w, images/bd-river-boats-dusk.jpg 1800w" sizes="100vw">
+    <div class="wrap">
+      <div class="copy on-dark">
+        <span class="kicker reveal">From seas to mountains</span>
+        <h2 class="t-1 reveal d1">Home, <em>as few ever see it.</em></h2>
+        <p class="lead reveal d2">Palaces of Old Dhaka, the coast by private boat, tea gardens at first light and the country as very few people see it, shown by people who live here.</p>
       </div>
-      <div class="tab-panel" role="tabpanel" id="panel-personal" aria-labelledby="tab-personal">
-        <div class="split-media"><img src="images/lux-villa-evening.jpg" alt="A villa and pool lit up in the evening" loading="lazy" decoding="async"></div>
-        <div>
-          <h3>Personal Concierge</h3>
-          <p>For you and your family, at home or abroad. One small team that learns your tastes, remembers your dates and handles the rest. Options for special requests within 24 hours, and nothing booked without your yes.</p>
-          <div class="btn-row"><a class="btn" href="personal-concierge.html">Discover personal membership</a></div>
+    </div>
+  </section>
+
+
+  <!-- ================= HOW IT WORKS ================= -->
+  <section class="section light">
+    <div class="wrap">
+      <div class="split">
+        <div class="media reveal">
+          <div class="phone">
+            <div class="screen">
+              <div class="chat-top"><img src="images/logo/walvis-seal-96.png" alt=""><div><b>Walvis Concierge</b><small>online</small></div></div>
+              <div class="chat-body">
+                <div class="msg me">Our anniversary is Friday. Something she&rsquo;ll remember, please.<time>21:04</time></div>
+                <div class="msg them">Lovely. Three ideas by tomorrow noon: a private rooftop dinner, a chef at home, or a night away by the sea.<time>21:06</time></div>
+                <div class="msg me">The rooftop sounds perfect.<time>12:10</time></div>
+                <div class="msg them">Reserved for 8 pm, with her favourite white roses and a violinist for the first half hour. Shall I confirm?<time>12:14</time></div>
+                <div class="msg me">Yes, thank you.<time>12:15</time></div>
+              </div>
+            </div>
+          </div>
+          <p class="note-small">A sample conversation, for illustration</p>
+        </div>
+        <div class="copy">
+          <span class="kicker reveal">How it works</span>
+          <h2 class="t-1 reveal d1">Simple, <em>on purpose.</em></h2>
+          <p class="lead reveal d2">No forms, no apps, no hold music. One message, and a real person takes it from there.</p>
         </div>
       </div>
-      <div class="tab-panel" role="tabpanel" id="panel-corporate" aria-labelledby="tab-corporate" hidden>
-        <div class="split-media"><img src="images/lux-cufflinks.jpg" alt="A man in a dark suit fastening his cufflinks" loading="lazy" decoding="async"></div>
-        <div>
-          <h3>Corporate Concierge</h3>
-          <p>For companies that care how they are remembered. Executive support, visiting guests, corporate gifting, business travel, client dinners and staff rewards, on terms tailored to your company.</p>
-          <div class="btn-row"><a class="btn" href="corporate-concierge.html">Discover corporate membership</a></div>
-        </div>
+      <ol class="steps" style="margin-top:clamp(70px,8vw,110px)">
+        <li class="reveal"><h3>You ask</h3><p>A message, a voice note or a call. As vague or as precise as you like.</p></li>
+        <li class="reveal d1"><h3>We find options</h3><p>For special requests you get two or three options within 24 hours.</p></li>
+        <li class="reveal d2"><h3>You choose</h3><p>Nothing is bought or booked until you have said yes.</p></li>
+        <li class="reveal d3"><h3>Consider it done</h3><p>We handle every step, then let you know it is finished.</p></li>
+      </ol>
+      <div class="honest reveal">
+        <h3>Honest, always.</h3>
+        <p>We go to real lengths for every request, but we never pretend. If something cannot be done, you hear it early, along with the next best thing.</p>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ===== VISITORS AND EXPATS (its own service, open to everyone) ===== -->
-<section class="section">
-  <div class="wrap">
-    <div class="split">
-      <div class="split-media reveal"><img src="images/lux-wing-clouds.jpg" alt="An aircraft wing above the clouds" loading="lazy" decoding="async"></div>
-      <div class="split-text reveal">
-        <span class="eyebrow">Visitors and Expats</span>
-        <h2>Arriving in Bangladesh? <em>We will be waiting.</em></h2>
-        <p>For visitors, executives and expatriates. Someone waiting when you land, somewhere beautiful to stay, a safe driver and the best of the country, shown by people who live here.</p>
-        <ul class="ticks">
+  <!-- ================= MEMBERSHIP ================= -->
+  <section class="section mist">
+    <div class="wrap">
+      <div class="head center reveal">
+        <span class="kicker">Membership</span>
+        <h2 class="t-1">One standard, <em>for every member.</em></h2>
+        <p class="lead">Personal membership has no paid tiers of service. Corporate terms are tailored to each company.</p>
+      </div>
+      <div class="tiers">
+        <article class="tier reveal">
+          <div class="ph mask"><img src="images/lux-candlelight.jpg" alt="Candlelit room" loading="lazy" style="object-position:50% 40%" srcset="images/sm/lux-candlelight.jpg 900w, images/lux-candlelight.jpg 1200w" sizes="100vw"></div>
+          <div class="body">
+            <span class="kicker">Personal</span>
+            <h3>Personal <em>Concierge</em></h3>
+            <p>For you and your family, at home or abroad. One small team that learns your tastes, remembers your dates and handles the rest.</p>
+            <div class="foot"><small>Membership by enquiry</small><a class="btn btn-plum" href="membership.html">Discover <svg class="i"><use href="#i-arrow"/></svg></a></div>
+          </div>
+        </article>
+        <article class="tier reveal d1">
+          <div class="ph mask"><img src="images/lux-skyline-night.jpg" alt="City skyline at night" loading="lazy" srcset="images/sm/lux-skyline-night.jpg 900w, images/lux-skyline-night.jpg 1600w" sizes="100vw"></div>
+          <div class="body">
+            <span class="kicker">Corporate</span>
+            <h3>Corporate <em>Concierge</em></h3>
+            <p>For companies that care how they are remembered. Executive support, visiting guests, gifting, travel, client dinners and staff rewards.</p>
+            <div class="foot"><small>Terms tailored to you</small><a class="btn btn-plum" href="membership.html">Discover <svg class="i"><use href="#i-arrow"/></svg></a></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= DISCOVER BANGLADESH ================= -->
+  <section class="section light">
+    <div class="wrap split flip">
+      <div class="media reveal"><div class="mask"><img src="images/lux-jet-window.jpg" alt="View from an aircraft window" loading="lazy" srcset="images/sm/lux-jet-window.jpg 900w, images/lux-jet-window.jpg 1600w" sizes="100vw"></div><span class="frame"></span></div>
+      <div class="copy">
+        <span class="kicker reveal">Discover Bangladesh</span>
+        <h2 class="t-1 reveal d1">Arriving in Bangladesh? <em>We will be waiting.</em></h2>
+        <p class="lead reveal d2">For visitors, executives and Bangladeshis coming home. Someone waiting when you land, somewhere beautiful to stay, a safe driver and the best of the country, shown by people who live here.</p>
+        <ul class="checks reveal d3">
           <li>Someone waiting when you land</li>
           <li>Residences, hotels and a trusted chauffeur</li>
           <li>Business visits, interpreters and private tours</li>
         </ul>
-        <div class="btn-row"><a class="btn" href="foreigners-concierge.html">Discover the service</a></div>
+        <div class="btn-row reveal d4"><a class="link" href="foreigners.html">Discover Bangladesh <svg class="i"><use href="#i-arrow"/></svg></a>&nbsp;&nbsp;&nbsp;<a class="link" href="expats.html">Concierge for Expats <svg class="i"><use href="#i-arrow"/></svg></a></div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ===== HOW IT WORKS ===== -->
-<section class="section section--plum">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <span class="eyebrow">How it works</span>
-      <h2>Simple, <em>on purpose.</em></h2>
+  <!-- ================= FROM THE JOURNAL (stories from js/journal-data.js) ================= -->
+  <section class="section mist">
+    <div class="wrap">
+      <div class="head-row">
+        <div class="head reveal">
+          <span class="kicker">The Journal</span>
+          <h2 class="t-1">The latest, <em>from The Journal.</em></h2>
+          <p class="lead">News from style, travel, collecting, food and home, updated every day.</p>
+        </div>
+        <a class="btn btn-line reveal" href="journal.html">Read The Journal <svg class="i"><use href="#i-arrow"/></svg></a>
+      </div>
+      <div class="worlds" id="journal-latest"></div>
     </div>
-    <div class="steps">
-      <div class="step reveal"><h3>You ask</h3><p>A message, a voice note or a call. No forms, no apps, no hold music.</p></div>
-      <div class="step reveal"><h3>We find options</h3><p>For special requests you get two or three options within 24 hours.</p></div>
-      <div class="step reveal"><h3>You choose</h3><p>Nothing is bought or booked until you have said yes.</p></div>
-      <div class="step reveal"><h3>Consider it done</h3><p>We handle every step, then let you know it is finished.</p></div>
+  </section>
+
+  <!-- ================= CLOSING ================= -->
+  <section class="section closing dark">
+    <div class="ocean faint" aria-hidden="true"><canvas class="sea" data-mode="faint"></canvas></div>
+    <div class="wrap">
+      <div class="meander short reveal"></div>
+      <img class="seal reveal" src="images/logo/walvis-seal-180.png" alt="" width="92" height="92">
+      <h2 class="t-1 reveal d1">Why take the hassle? <em>We are here.</em></h2>
+      <p class="lead reveal d2">Tell us what you need, or simply ask how membership works. A real person replies.</p>
+      <div class="btn-row reveal d3" style="justify-content:center">
+        <a class="btn btn-teal" data-wa="Hello Walvis, I would like to know how membership works." href="#"><svg class="i"><use href="#i-chat"/></svg> Enquire on WhatsApp</a>
+        <a class="btn btn-line" href="contact.html" style="color:#fffafa;border-color:rgba(255,250,250,.45)">Other ways to reach us</a>
+      </div>
+      <p class="small-print reveal">Membership is by enquiry.</p>
     </div>
-    <div class="honest reveal">
-      <strong>Honest, always.</strong>
-      <p>We go to real lengths for every request, but we never pretend. If something cannot be done, you hear it early, along with the next best thing.</p>
-    </div>
-  </div>
-</section>
+  </section>
 
-<!-- ===== CLOSING BAND ===== -->
-<section class="band">
-  <img class="band-media" src="images/lux-skyline-night.jpg" alt="" loading="lazy" decoding="async">
-  <div class="wrap reveal">
-    <span class="eyebrow">Limited membership</span>
-    <h2>Why take the hassle? <em>We are here.</em></h2>
-    <p>Tell us what you need, or simply ask how membership works. A real person replies.</p>
-    <div class="btn-row">
-      <a class="btn btn-wa" data-wa="Hello Walvis, I would like to know more about membership.">Enquire on WhatsApp</a>
-      <a class="btn btn--ghost" href="contact.html">Other ways to reach us</a>
-    </div>
-    <p class="fine-print">Membership is by enquiry.</p>
-  </div>
-</section>
-
-</main>
-
-<!-- Footer and the floating WhatsApp button are built by js/main.js -->
-<div id="site-footer"></div>
-
-<script src="js/data.js"></script>
-<script src="js/main.js"></script>
+  </main>
+  <div id="site-footer"></div>
+  <script src="js/journal-data.js?v=202611111829"></script>
+  <script src="js/journal-art.js?v=202611111829"></script>
+  <script src="js/journal-latest.js?v=202611111829"></script>
+  <script src="js/site.js?v=202611111829"></script>
 </body>
 </html>
