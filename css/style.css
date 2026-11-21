@@ -858,8 +858,6 @@ html.calm-glass .hero-card { background: rgba(26, 12, 24, .9); }
    v8 · SMOOTH EVERYWHERE
    ========================================================= */
 
-/* sections far below the fold are only laid out and painted when you get near them */
-.section:not(.hero), .band, .footer { content-visibility: auto; contain-intrinsic-size: auto 900px; }
 
 /* phones and tablets: lighter effects, same look */
 @media (max-width: 1024px), (hover: none) {
@@ -1007,3 +1005,51 @@ html.calm-glass .hero-card { background: rgba(26, 12, 24, .9); }
 /* footer links shown only if JavaScript does not run (js/site.js replaces them with the full footer) */
 .foot-fallback { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 22px; padding: 50px 16px; background: var(--plum, #3a1035); }
 .foot-fallback a { color: #fffafa; font-size: .9rem; }
+
+/* =========================================================
+   v19 · TABLETS (iPad and similar, portrait and landscape)
+   Between phone and desktop: tablet margins and type, and
+   two-column sections stay two columns wherever they fit.
+   ========================================================= */
+@media (min-width: 681px) and (max-width: 1199px) {
+  :root { --gutter: 40px; }
+  .phrase { font-size: clamp(3.5rem, 7.2vw, 5.5rem); }
+  .hero-what { font-size: 1.125rem; max-width: 30rem; }
+  .t-1 { font-size: clamp(2.5rem, 5.6vw, 3.75rem); }
+  .lead { font-size: 1.125rem; }
+  .tiers { grid-template-columns: 1fr 1fr; gap: 24px; }
+  .tier .body { padding: 28px 24px; }
+  .mosaic { grid-auto-rows: 160px; gap: 12px; }
+  .m-a { grid-row: span 3; }
+  .m-f { grid-column: span 12; }
+  .band { min-height: 56vh; padding: 80px var(--gutter); }
+  .closing .wrap.lg { padding: 64px 40px; }
+  .footer .foot-top { gap: 40px 32px; }
+}
+@media (min-width: 835px) and (max-width: 1199px) {
+  .foot-top { grid-template-columns: 1.3fr 1fr 1fr 1.3fr; }
+}
+/* tablets held upright (iPad 744 to 834 wide): not the phone layout */
+@media (min-width: 681px) and (max-width: 834px) {
+  :root { --gutter: 32px; }
+  .hero { padding: 104px var(--gutter) 56px; gap: 24px; }
+  .hero-foot { gap: 20px; }
+  .section { padding: 80px var(--gutter); }
+  .menu-btn .lbl { display: inline; }
+  .statement { grid-template-columns: 1fr; gap: 32px; }
+  .split { gap: 40px; }
+  .split .media .mask img { aspect-ratio: 3 / 2; }
+  .phone { width: min(320px, 100%); }
+  .steps { grid-template-columns: 1fr 1fr; gap: 0 32px; }
+  .steps li { display: grid; grid-template-columns: none; padding: 24px 0 32px !important; }
+  .steps li::before { grid-row: auto; font-size: 2.25rem; }
+  .honest, .honest.lg { grid-template-columns: auto 1fr; gap: 16px 40px; }
+  .tier .foot { flex-direction: column; align-items: stretch; }
+  .tier .foot .btn { width: 100%; }
+  .footer .foot-top { grid-template-columns: 1fr 1fr 1fr; }
+  .foot-brand { grid-column: 1 / -1; grid-template-columns: auto 1fr; align-items: center; column-gap: 20px; }
+  .foot-brand img { grid-row: span 2; }
+  .wa span { display: inline; }
+  .wa { width: auto; padding: 0 18px 0 14px; }
+}
+
