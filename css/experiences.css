@@ -15,7 +15,7 @@ body.experiences-page main { overflow: clip; background: radial-gradient(ellipse
 .exp-hero .kicker, .exp-catalogue .kicker { color: #5cc4c0; }
 .exp-hero .kicker::before, .exp-catalogue__intro .kicker::before, .exp-philosophy .kicker::before { content: none; display: none; }
 .exp-hero h1 { max-width: 14ch; margin: 14px 0 0; font-size: clamp(3.35rem, 8.7vw, 7.4rem); font-weight: 600; line-height: .94; }
-.exp-hero h1 em, .exp-catalogue h2 em, .exp-approach h2 em, .exp-philosophy h2 em, .exp-outro h2 em { color: #5cc4c0; }
+.exp-hero h1 em, .exp-catalogue h2 em, .exp-approach h2 em, .exp-philosophy h2 em, .exp-outro h2 em { color: inherit; font-style: normal; }
 .exp-hero__motto { margin: 22px 0 0; color: #5cc4c0; font-family: var(--caps); font-size: .7rem; letter-spacing: .23em; text-transform: uppercase; }
 .exp-hero__copy { display: grid; gap: 10px; max-width: 760px; margin-top: clamp(28px, 4vw, 44px); color: rgba(255,250,250,.82); font-size: clamp(1rem, 1.3vw, 1.14rem); line-height: 1.75; }
 .exp-hero__copy p { margin: 0; }
@@ -70,10 +70,10 @@ html.js .exp-discover [data-discover-period] { display: inline-block; opacity: 0
 @keyframes catalogue-light-drift { from { transform: translate3d(-2%, -1%, 0) scale(.96); } to { transform: translate3d(3%, 2%, 0) scale(1.06); } }
 @keyframes catalogue-glint { 0%, 67%, 100% { transform: translateX(0) skewX(-18deg); opacity: 0; } 74% { opacity: .7; } 87% { transform: translateX(470%) skewX(-18deg); opacity: 0; } }
 .exp-list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: start; gap: 18px; }
-.exp-item { position: relative; overflow: hidden; border: 1px solid rgba(255,250,250,.14); border-radius: 22px; background: linear-gradient(140deg, rgba(255,250,250,.09), rgba(255,250,250,.025) 52%, rgba(92,196,192,.045)); box-shadow: inset 0 1px 0 rgba(255,255,255,.18), 0 22px 52px -42px rgba(0,0,0,.92); transition: border-color .4s var(--ease), background .4s var(--ease), transform .4s var(--ease), box-shadow .4s var(--ease); }
+.exp-item { position: relative; overflow: hidden; border: 1px solid rgba(255,250,250,.14); border-radius: 16px; background: var(--night-2); border-color: var(--hair); transition: border-color .16s var(--ease), background-color .16s var(--ease); }
 .exp-item::before { content: ""; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(108deg, transparent 34%, rgba(255,255,255,.14) 49%, transparent 64%); transform: translateX(-125%); transition: transform .85s var(--ease); }
-.exp-item:hover, .exp-item[open] { border-color: rgba(92,196,192,.52); background: linear-gradient(140deg, rgba(255,250,250,.12), rgba(255,250,250,.035) 52%, rgba(92,196,192,.08)); transform: translateY(-3px); box-shadow: inset 0 1px 0 rgba(255,255,255,.22), 0 30px 58px -38px rgba(0,0,0,.94); }
-.exp-item:hover::before { transform: translateX(125%); }
+.exp-item:hover, .exp-item[open] { border-color: var(--hair-strong); background: var(--night-3); }
+.exp-item::before { display: none; }
 .exp-item summary { position: relative; z-index: 1; display: grid; grid-template-columns: minmax(0,1fr) auto; grid-template-areas: "title plus" "motto plus"; gap: 7px 24px; min-height: 112px; padding: 24px clamp(20px,3vw,34px); cursor: pointer; list-style: none; transition: background .35s var(--ease), padding .4s var(--ease); }
 .exp-item:not([open]) summary { min-height: 190px; align-content: center; }
 .exp-item[open] summary { padding-bottom: 29px; background: linear-gradient(90deg, rgba(92,196,192,.08), transparent 42%); }
@@ -110,10 +110,10 @@ html.js .exp-discover [data-discover-period] { display: inline-block; opacity: 0
 .exp-philosophy { min-height: 0; padding-bottom: clamp(28px, 4vw, 56px); }
 .exp-outro { padding-top: clamp(28px, 4vw, 56px); }
 .exp-outro__grid { position: relative; overflow: hidden; display: grid; gap: 38px; padding: clamp(32px,5vw,56px); border: 1px solid rgba(255,250,250,.16); border-radius: 28px; background: linear-gradient(140deg, rgba(255,250,250,.1), rgba(255,250,250,.025) 52%, rgba(92,196,192,.055)); box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 28px 64px -38px rgba(0,0,0,.72); }
-.exp-outro__grid::before { content: ""; position: absolute; inset: -60%; pointer-events: none; background: conic-gradient(from 90deg, transparent, rgba(92,196,192,.13), transparent 28%); animation: outro-sweep 12s linear infinite; }
+.exp-outro__grid::before { content: ""; position: absolute; inset: -60%; pointer-events: none; display: none; }
 .exp-outro__grid > * { position: relative; z-index: 1; }
 .exp-outro p { color: rgba(255,250,250,.8); line-height: 1.8; }
-.exp-outro .btn { margin-top: 14px; animation: outro-pulse 3.2s ease-in-out infinite; }
+.exp-outro .btn { margin-top: 16px; }
 @keyframes outro-sweep { to { transform: rotate(1turn); } }
 @keyframes outro-pulse { 0%, 100% { box-shadow: 0 0 0 0 rgba(92,196,192,0); } 50% { box-shadow: 0 0 0 9px rgba(92,196,192,.08); } }
 

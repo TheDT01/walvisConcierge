@@ -74,7 +74,7 @@ var ASSET_V = ((document.currentScript && document.currentScript.src.match(/\?v=
       '<header class="topbar" id="topbar">' +
         '<button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="drawer"><span class="tail" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 12V18.8M2.6 6.4C6 7.8 9.4 8.2 12 9.4 14.6 8.2 18 7.8 21.4 6.4 19.9 10.9 15.6 12.6 12 12 8.4 12.6 4.1 10.9 2.6 6.4Z"/></svg></span><span class="lbl">Menu</span></button>' +
         '<a class="brand" href="index.html" aria-label="Walvis Concierge, home"><img src="' + SITE.logo + '" alt="Walvis Concierge seal" width="58" height="58"><span class="caps">Walvis</span></a>' +
-        '<a class="btn member-btn" href="membership.html"><span class="v">View&nbsp;</span>Membership</a>' +
+        '<a class="btn member-btn" href="membership.html">Membership</a>' +
       '</header>' +
       '<aside class="drawer" id="drawer" aria-hidden="true" aria-label="Menu">' +
         '<button class="drawer-close" id="drawerClose" aria-label="Close menu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7l10 10M17 7L7 17"/></svg></button>' +
@@ -91,9 +91,9 @@ var ASSET_V = ((document.currentScript && document.currentScript.src.match(/\?v=
   var f = document.getElementById('site-footer');
   if (f) {
     f.outerHTML =
-      '<footer class="footer"><div class="meander" style="max-width:var(--wrap);margin:0 auto 70px"></div>' +
+      '<footer class="footer">' +
         '<div class="foot-top">' +
-          '<div class="foot-brand"><img src="' + SITE.logo + '" alt="" width="74" height="74"><span class="caps">Walvis</span><p>From seas to mountains,<br>consider it done.</p></div>' +
+          '<div class="foot-brand"><img src="' + SITE.logo + '" alt="" width="74" height="74"><span class="caps">Walvis</span><p>From seas to mountains,<br>consider it done</p></div>' +
           '<div><h4>Services</h4><nav>' + SITE.menu.filter(function (m) { return !/^(about|journal|membership|contact)\.html$/.test(m.href); }).map(function (m) { return '<a href="' + m.href + '">' + m.label + '</a>'; }).join('') + '</nav></div>' +
           '<div><h4>Walvis</h4><nav><a href="membership.html">Membership</a><a href="what-we-offer.html">What we offer</a><a href="special-requests.html">Special Requests</a><a href="journal.html">The Journal</a><a href="about.html">About us</a><a href="contact.html">Contact</a></nav></div>' +
           '<div class="contact"><h4>Reach us</h4>' +
@@ -210,35 +210,21 @@ var ASSET_V = ((document.currentScript && document.currentScript.src.match(/\?v=
     var oc = document.createElement('script'); oc.src = 'js/ocean.js' + ASSET_V; oc.defer = true; document.body.appendChild(oc);
   }
 
-  /* =========================================================
-     LIQUID GLASS
-     ========================================================= */
-  // a slow, drifting wash of plum and teal light behind everything
-  var amb = document.createElement('div'); amb.className = 'ambient'; amb.setAttribute('aria-hidden', 'true');
-  amb.innerHTML = '<i></i><i></i><i></i>'; document.body.insertBefore(amb, document.body.firstChild);
+  /* ---------- Panels ----------
+     Cards that sit on the night water share one quiet surface (css/style.css, "lg"). */
+  var PANELS = '.tier, .world, .svc > div, .principles > div, .steps li, .honest, .closing .wrap, .phone, .footer .foot-top, .credits-wrap';
+  document.querySelectorAll(PANELS).forEach(function (el) { el.classList.add('lg'); });
 
-  // glass panels: each gets a soft highlight that follows the pointer, like light on curved glass
-  var GLASS = '.topbar, .drawer, .hero-card, .tier, .world, .svc > div, .principles > div, .steps li, .honest, .closing .wrap, .phone, .footer .foot-top, .credits-wrap';
-  document.querySelectorAll(GLASS).forEach(function (el) {
-    el.classList.add('lg');
-    var s = document.createElement('span'); s.className = 'spec'; s.setAttribute('aria-hidden', 'true'); el.insertBefore(s, el.firstChild);
-  });
-  document.addEventListener('pointermove', function (e) {
-    var el = e.target.closest && e.target.closest('.lg'); if (!el) return;
-    var r = el.getBoundingClientRect();
-    el.style.setProperty('--mx', (e.clientX - r.left) + 'px'); el.style.setProperty('--my', (e.clientY - r.top) + 'px');
-  }, { passive: true });
-
-  /* ---------- Page transitions: a liquid veil ----------
-     Leaving: plum-and-teal water ripples out from where you clicked.
-     Arriving: the water drains upward with a soft, wavy edge. */
+  /* ---------- Page transitions: a veil of night water ----------
+     Leaving: the water closes in from where you clicked.
+     Arriving: it drains upward to reveal the page. */
   var veil = document.createElement('div'); veil.className = 'veil cover'; veil.setAttribute('aria-hidden', 'true');
   veil.innerHTML =
     '<svg width="0" height="0" style="position:absolute" focusable="false"><filter id="liquid" x="-10%" y="-10%" width="120%" height="120%">' +
       '<feTurbulence type="fractalNoise" baseFrequency=".007 .011" numOctaves="2" seed="4"/>' +
       '<feDisplacementMap in="SourceGraphic" scale="70" xChannelSelector="R" yChannelSelector="G"/></filter></svg>' +
-    '<div class="veil-liquid"><div class="veil-water"><i></i></div></div>' +
-    '<div class="veil-seal"><span class="veil-ring"></span><span class="veil-ring"></span><img src="' + SITE.logo + '" alt=""></div>';
+    '<div class="veil-liquid"><div class="veil-water"></div></div>' +
+    '<div class="veil-seal"><img src="' + SITE.logo + '" alt=""></div>';
   document.body.appendChild(veil);
   document.documentElement.classList.remove('veiled');
   function reveal() {
@@ -264,41 +250,7 @@ var ASSET_V = ((document.currentScript && document.currentScript.src.match(/\?v=
     veil.classList.remove('out', 'cover'); veil.classList.add('pre-in');
     void veil.offsetWidth;
     veil.classList.add('in');
-    setTimeout(function () { location.href = a.href; }, 820);
-  });
-
-  if (reduce) return;
-
-  /* ---------- Parallax bands ---------- */
-  var bands = [].slice.call(document.querySelectorAll('.band > img'));
-  function parallax() {
-    bands.forEach(function (img) {
-      var r = img.parentElement.getBoundingClientRect();
-      if (r.bottom < 0 || r.top > innerHeight) return;
-      img.style.transform = 'translateY(' + ((r.top + r.height / 2 - innerHeight / 2) * -.12) + 'px)';
-    });
-  }
-  var fine = matchMedia('(hover: hover) and (pointer: fine) and (min-width: 1025px)').matches, pQueued = false;
-  if (bands.length && fine) { addEventListener('scroll', function () { if (pQueued) return; pQueued = true; requestAnimationFrame(function () { pQueued = false; parallax(); }); }, { passive: true }); parallax(); }
-
-  /* ---------- Musical notes (inside [data-notes]) ---------- */
-  var zones = document.querySelectorAll('[data-notes]');
-  var NOTES = ['♪', '♫', '♩', '♬'], COLORS = ['#ffffff', '#c8f3ef', '#5cc4c0'];
-  var lx = 0, ly = 0, lt = 0;
-  function note(x, y) {
-    var n = document.createElement('span');
-    n.className = 'note'; n.textContent = NOTES[Math.random() * 4 | 0];
-    n.style.cssText = 'left:' + x + 'px;top:' + y + 'px;color:' + COLORS[Math.random() * 3 | 0] + ';font-size:' + (14 + Math.random() * 12) + 'px';
-    n.style.setProperty('--dx', (Math.random() * 50 - 25) + 'px'); n.style.setProperty('--r', (Math.random() * 30 - 15) + 'deg');
-    document.body.appendChild(n); n.addEventListener('animationend', function () { n.remove(); });
-  }
-  zones.forEach(function (z) {
-    function move(x, y) {
-      var t = performance.now();
-      if (t - lt > 140 && Math.hypot(x - lx, y - ly) > 46) { note(x, y); lx = x; ly = y; lt = t; }
-    }
-    z.addEventListener('mousemove', function (e) { move(e.clientX, e.clientY); });
-    z.addEventListener('touchmove', function (e) { var p = e.touches[0]; if (p) move(p.clientX, p.clientY); }, { passive: true });
+    setTimeout(function () { location.href = a.href; }, 480);
   });
 
 })();

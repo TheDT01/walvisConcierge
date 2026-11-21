@@ -361,8 +361,8 @@
           if (!fanPat) fanPat = fc.createPattern(TILE, 'repeat');
           if (fanPat.setTransform && window.DOMMatrix) {
             fc.globalCompositeOperation = 'source-over'; fc.fillStyle = fanPat;
-            fanPat.setTransform(new DOMMatrix().translate(time * 7, time * 4.5).scale(1.8)); fc.globalAlpha = .17; fc.fillRect(0, 0, hw, hh);
-            fanPat.setTransform(new DOMMatrix().translate(-time * 5.5, time * 3).rotate(28).scale(1.3)); fc.globalAlpha = .1; fc.fillRect(0, 0, hw, hh);
+            fanPat.setTransform(new DOMMatrix().translate(time * 7, time * 4.5).scale(1.8)); fc.globalAlpha = .09; fc.fillRect(0, 0, hw, hh);
+            fanPat.setTransform(new DOMMatrix().translate(-time * 5.5, time * 3).rotate(28).scale(1.3)); fc.globalAlpha = .05; fc.fillRect(0, 0, hw, hh);
             // brightest near the surface, fading with depth
             fc.globalCompositeOperation = 'destination-in'; fc.globalAlpha = 1;
             var fade = fc.createLinearGradient(0, 0, 0, hh); fade.addColorStop(0, 'rgba(0,0,0,1)'); fade.addColorStop(.5, 'rgba(0,0,0,.5)'); fade.addColorStop(1, 'rgba(0,0,0,.08)');

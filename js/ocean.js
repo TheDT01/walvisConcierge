@@ -218,7 +218,7 @@
     '  vec2 q1 = (p - u_time * vec2(14.0, 9.0)) / 921.6;' +
     '  float cs = cos(-0.4887), sn = sin(-0.4887);' +
     '  vec2 d2 = p - u_time * vec2(-11.0, 6.0); vec2 q2 = vec2(cs * d2.x - sn * d2.y, sn * d2.x + cs * d2.y) / 665.6;' +
-    '  float c = texture2D(u_tile, q1).a * .17 + texture2D(u_tile, q2).a * .10;' +
+    '  float c = texture2D(u_tile, q1).a * .09 + texture2D(u_tile, q2).a * .05;' +
     '  float y = p.y / u_size.y; float fade = y < .5 ? mix(1.0, .5, y * 2.0) : mix(.5, .08, (y - .5) * 2.0);' +
     '  vec3 light = u_cCol * c * fade;' +
     '  vec2 s = (p - u_sun) / vec2(u_sunR, u_sunR * .55); float sd = length(s);' +
