@@ -1011,7 +1011,7 @@ html.calm-glass .hero-card { background: rgba(26, 12, 24, .9); }
    Between phone and desktop: tablet margins and type, and
    two-column sections stay two columns wherever they fit.
    ========================================================= */
-@media (min-width: 681px) and (max-width: 1199px) {
+@media (min-width: 681px) and (max-width: 1199px) and (min-height: 501px) {
   :root { --gutter: 40px; }
   .phrase { font-size: clamp(3.5rem, 7.2vw, 5.5rem); }
   .hero-what { font-size: 1.125rem; max-width: 30rem; }
@@ -1030,7 +1030,7 @@ html.calm-glass .hero-card { background: rgba(26, 12, 24, .9); }
   .foot-top { grid-template-columns: 1.3fr 1fr 1fr 1.3fr; }
 }
 /* tablets held upright (iPad 744 to 834 wide): not the phone layout */
-@media (min-width: 681px) and (max-width: 834px) {
+@media (min-width: 681px) and (max-width: 834px) and (min-height: 501px) {
   :root { --gutter: 32px; }
   .hero { padding: 104px var(--gutter) 56px; gap: 24px; }
   .hero-foot { gap: 20px; }
@@ -1053,3 +1053,25 @@ html.calm-glass .hero-card { background: rgba(26, 12, 24, .9); }
   .wa { width: auto; padding: 0 18px 0 14px; }
 }
 
+/* =========================================================
+   v20 · LARGE SCREENS (1800px and wider)
+   A wider column and a hero headline that keeps its presence.
+   ========================================================= */
+@media (min-width: 1800px) {
+  :root { --wrap: 1440px; }
+  .phrase { font-size: clamp(6rem, 4.6vw, 8rem); }
+  .hero-what { font-size: 1.25rem; max-width: 34rem; }
+  .t-1 { font-size: clamp(4.3rem, 3.2vw, 5rem); }
+  .lead { font-size: 1.25rem; max-width: 40rem; }
+}
+
+
+/* phones held sideways (short screens): the whole hero, button included, fits on one screen */
+@media (max-height: 500px) and (orientation: landscape) {
+  .hero { padding-top: 72px; padding-bottom: 24px; }
+  .hero-foot { gap: 12px; }
+  .hero-foot .caps { display: none; }
+  .phrase { font-size: clamp(1.875rem, 5vw, 2.5rem); }
+  .hero-what { font-size: .9375rem; }
+  .hero-foot .btn { min-height: 44px; }
+}
